@@ -2,11 +2,11 @@ import React from 'react';
 // import { connect } from 'dva';
 import propTypes from 'prop-types'
 
-const Counter = ({counter} ) => {
+const Counter = ({counter,dispatch} ) => {
   return (
     <div>
-      <h1>{counter.counter}</h1>
-      <button>+</button>
+      <h1>{counter.count}</h1>
+      <button onClick={ () => { dispatch({ type: 'counter/add' }) } }>+</button>
     </div>
   )
 }

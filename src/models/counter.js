@@ -1,6 +1,13 @@
 export default{
     namespace:'counter',
     state:{
-        counter:2
+        count:2
+    },
+    reducers: {
+        'add' (state, action) {
+            return {
+                count: state.count + 1
+            };
+        }
     }
 }
